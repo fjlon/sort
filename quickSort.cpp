@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-int patiton(int* value,int low,int high)
+int partiton(int* value,int low,int high)
 {
     if(!value||low>=high)
         return -1;
@@ -25,7 +25,7 @@ int qsort(int* value,int low,int high)
 {
     if(!value||low>=high)
         return -1;
-    int position = patiton(value,low,high);
+    int position = partiton(value,low,high);
     qsort(value,low,position-1);
     qsort(value,position+1,high);
     return 0;
